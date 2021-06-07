@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.aline.student.bean.Student;
+import org.aline.student.exceptions.InvalidStudentIdException;
 import org.springframework.stereotype.Repository;
 @Repository
 public class StudentDao {
@@ -33,9 +34,10 @@ public class StudentDao {
 	}
 
 	//updating student based on previous sId
-	public Student updateStudent(Student ustd) {
+	public Student updateStudent(Student ustd) throws InvalidStudentIdException {
+		
 		if (ustd.getsId() <= 0) {
-			return null;
+			throw new InvalidStudentIdException("Enter invalid Student Age >=0 ||>0");
 		}
 		slist.replace(ustd.getsId(), ustd);
 		return ustd;

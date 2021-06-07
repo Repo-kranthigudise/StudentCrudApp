@@ -3,6 +3,7 @@ package org.aline.student.controler;
 import java.util.List;
 
 import org.aline.student.bean.Student;
+import org.aline.student.exceptions.InvalidStudentIdException;
 import org.aline.student.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,7 +31,7 @@ public class StudentControler {
 	}
 	//
 	@RequestMapping(value = "/updatestudent", method = RequestMethod.PUT, headers = "Accept=application/json")
-	public Student updateStudent(@RequestBody Student usdto) {
+	public Student updateStudent(@RequestBody Student usdto) throws InvalidStudentIdException {
 		return studentservice.updateStudent(usdto);
 
 	}

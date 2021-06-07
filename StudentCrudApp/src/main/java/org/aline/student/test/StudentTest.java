@@ -2,10 +2,11 @@ package org.aline.student.test;
 
 import org.aline.student.bean.Student;
 import org.aline.student.dao.StudentDao;
+import org.aline.student.exceptions.InvalidStudentIdException;
 
 public class StudentTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidStudentIdException {
 		StudentDao sdao = new StudentDao();
 		Student std = new Student(1, "kra", "g", "cse", 85.00);
 		Student std1 = new Student(2, "shiva", "b", "cse", 95.00);

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.aline.student.bean.Student;
 import org.aline.student.dao.StudentDao;
+import org.aline.student.exceptions.InvalidStudentIdException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,7 @@ public class StudentService {
 		return studentDao.getAllStudents();
 	}
 
-	public Student updateStudent(Student usdto) {
+	public Student updateStudent(Student usdto) throws InvalidStudentIdException {
 		return studentDao.updateStudent(usdto);
 
 	}
