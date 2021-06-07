@@ -16,19 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class StudentControler {
 	@Autowired
 	private StudentService studentservice;
-
+	//OK
 	@RequestMapping(value = "/getstudents", method = RequestMethod.GET, headers = "Accept=application/json")
 	public List<Student> getAllstudents() {
 		return studentservice.getStudents();
 
 	}
-
+    //Ok
 	@RequestMapping(value = "/addstudent", method = RequestMethod.POST, headers = "Accept=application/json")
 	public Student addStudent(@RequestBody Student stdo) {
 
 		return studentservice.addStudent(stdo);
 	}
-
+	//
 	@RequestMapping(value = "/updatestudent", method = RequestMethod.PUT, headers = "Accept=application/json")
 	public Student updateStudent(@RequestBody Student usdto) {
 		return studentservice.updateStudent(usdto);
@@ -40,7 +40,7 @@ public class StudentControler {
 		  studentservice.deleteStudent(sid);
 	 
 	    } 
-	 
+	 //OK
 	 @RequestMapping(value = "/getstudent/{sid}", method=RequestMethod.GET, headers = "Accept=application/json")
 	    public Student getStudentById(@PathVariable int sid) {
 	        return studentservice.getStudentbyId(sid);
