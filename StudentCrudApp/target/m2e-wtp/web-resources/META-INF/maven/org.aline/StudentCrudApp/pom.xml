@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.aline</groupId>
-  <artifactId>StudentCrudApp</artifactId>
-  <packaging>war</packaging>
-  <version>1.0.0-SNAPSHOT</version>
-  <name>StudentCrudApp Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.aline</groupId>
+	<artifactId>StudentCrudApp</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>StudentCrudApp Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
 		<spring.version>4.2.1.RELEASE</spring.version>
 	</properties>
 
@@ -34,7 +35,7 @@
 			<version>2.4.1</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -47,7 +48,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-  
-    <finalName>StudentCrudApp</finalName>
-  </build>
+		<finalName>StudentCrudApp</finalName>
+	</build>
 </project>

@@ -53,5 +53,10 @@ public class Student {
 	public void setTotalMarks(double totalMarks) {
 		this.totalMarks = totalMarks;
 	}
+	@Override
+	public String toString() {
+		return "Student [sId=" + sId + ", fName=" + fName + ", lName=" + lName + ", branch=" + branch + ", totalMarks="
+				+ totalMarks + "]";
+	}
 	
 }
